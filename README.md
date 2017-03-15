@@ -10,6 +10,16 @@ With this plugin the daemon retrieves and distributes the emails via a MTA on th
 It unifies your mailbox. Instead of checking multiple different email addresses, they can all be retrieved and delivered to your kopano mailbox.
 Also if your MTA is configured to check for Spam (spamassassin) or Viruses (clamav), you can be sure that all your email is checked before delivery.
 
+# Screenshots
+
+Fetchmail Plugin Settings:
+![Fetchmail Plugin Settings](/screenshots/fetchmail_settings_overview.png?raw=true "Fetchmail Plugin Settings")
+Create a new Account:
+![Create new Account](/screenshots/fetchmail_create_new_account_with_error.png?raw=true "Create a new Account")
+Account Status in Plugin Settings and Log Message:
+![Fetchmail Plugin Settings with Error](/screenshots/fetchmail_settings_overview_with_error.png?raw=true "Fetchmail Plugin Settings with Error")
+![Modify Account and Log Message](/screenshots/fetchmaiL_modify_account.png?raw=true "Modify Account and Log Message")
+
 # Requirements
 
 - fetchmail
