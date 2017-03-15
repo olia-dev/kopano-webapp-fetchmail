@@ -20,7 +20,7 @@ Also if your MTA is configured to check for Spam (spamassassin) or Viruses (clam
 # How to install
 
 - Install the Requirements.
-- Download and unzip the release[version].zip to the 'plugins' folder in your kopano-webapp installation (default: `/usr/share/kopano-webapp/plugins/`).
+- Download and unzip the fetchmail-1.0.zip to the 'plugins' folder in your kopano-webapp installation (default: `/usr/share/kopano-webapp/plugins/`).
 
 # Configuration
 
