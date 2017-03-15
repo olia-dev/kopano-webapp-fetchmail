@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>1.0</version>
+		<name>fetchmail</name>
+		<title>Fetchmail Plugin</title>
+		<author>Oliver Asselmann</author>
+		<authorURL>https://github.com/olia-dev/kopano-webapp-fetchmail</authorURL>
+		<description>Configure fetchmail from kopano webapp</description>
+	</info>
+	<config>
+		<configfile>config.php</configfile>
+	</config>
+	<translations>
+		<translationsdir>language</translationsdir>
+	</translations>
+	<components>
+		<component>
+			<files>
+				<server>
+					<serverfile>php/plugin.fetchmail.php</serverfile>
+					<serverfile type="module" module="pluginfetchmailmodule">php/class.pluginfetchmailmodule.php</serverfile>
+				</server>
+				<client>
+					<clientfile load="release">js/fetchmail.js</clientfile>
+					<clientfile load="debug">js/fetchmail-debug.js</clientfile>
+					<clientfile load="source">js/FetchmailPlugin.js</clientfile>
+					<clientfile load="source">js/settings/SettingsFetchmailCategory.js</clientfile>
+					<clientfile load="source">js/settings/SettingsFetchmailWidget.js</clientfile>
+					<clientfile load="source">js/data/FetchmailResponseHandler.js</clientfile>
+					<clientfile load="source">js/data/FetchmailAccountStore.js</clientfile>
+					<clientfile load="source">js/data/FetchmailAccountRecord.js</clientfile>
+					<clientfile load="source">js/data/JsconAccountReader.js</clientfile>
+					<clientfile load="source">js/dialogs/FetchmailAccountDialogContentPanel.js</clientfile>
+					<clientfile load="source">js/dialogs/FetchmailAccountDialogDetailsPanel.js</clientfile>
+					<clientfile load="source">js/ABOUT.js</clientfile>
+				</client>
+				<resources>
+					<resourcefile load="release">resources/css/fetchmail.css</resourcefile>
+					<resourcefile load="debug">resources/css/fetchmail.css</resourcefile>
+					<resourcefile load="source">resources/css/fetchmail-main.css</resourcefile>
+				</resources>
+			</files>
+		</component>
+	</components>
+</plugin>

@@ -1,0 +1,14 @@
+[Unit]
+Description=Fetchmail daemon for kopano-webapp plugin 'fetchmail'
+After=mysql.service kopano-server.service
+
+[Service]
+Type=forking
+Environment=LC_ALL=C LANG=C
+PIDFile=/var/lib/fetchmail/kopano_fetchmail_daemon.pid
+ExecStart=/usr/bin/perl /usr/share/kopano-webapp/plugins/fetchmail/php/daemon/kopano_fetchmail.pl --start
+ExecStop=/usr/bin/perl /usr/share/kopano-webapp/plugins/fetchmail/php/daemon/kopano_fetchmail.pl --stop
+TimeoutStopSec=60
+
+[Install]
+WantedBy=multi-user.target

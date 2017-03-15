@@ -1,0 +1,24 @@
+.icon_fetchmail_settings {
+	background-image:url(../icons/fetchmail_icon_scaled.png) !important;
+}
+.icon_fetchmail_success {
+	background-image:url(../icons/fetchmail_success.png);
+	background-repeat:no-repeat;
+	background-size:23px 30px;
+}
+.icon_fetchmail_failure {
+	background-image:url(../icons/fetchmail_failure.png);
+	background-repeat:no-repeat;
+	background-size:23px 30px;
+}
+.icon_fetchmail_unknown {
+	background-image:url(../icons/fetchmail_unknown.png);
+	background-repeat:no-repeat;
+	background-size:23px 30px;
+}
+.fetchmail-parameter-false { 
+    border-color:#ffa0a0; 
+} 
+.fetchmail-grid-polling-error {
+	background-color:#ff8b8b;
+}
