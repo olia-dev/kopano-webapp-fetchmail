@@ -60,6 +60,35 @@ Account Status in Plugin Settings and Log Message:
 - Database with fetchmail account informations.
 - Home directory of the `fetchmail` user (default /var/lib/fetchmail) where a list of already fetched emails (POP3) is saved.
 
+# How to change the AES Key used for Password Encryption of an existing Installation
+
+If you need to change the Key used to encrypt the Passwords stored in the Database for any reason (Security Breach, etc), a function "changeAESKey" is implemented in the class PluginFetchmailModule.
+To call this function, you have to create a simple PHP script and execute it. 
+
+An example, of how to call this function:
+`<?php
+
+$oldkey="changethis!";
+$newkey="changethis!";
+
+define('BASE_PATH', "/usr/share/kopano-webapp/");
+define('PATH_PLUGIN_DIR' , "plugins" );
+
+require_once (BASE_PATH . PATH_PLUGIN_DIR . "/fetchmail/config.php");
+require_once (BASE_PATH . PATH_PLUGIN_DIR . "/fetchmail/php/class.pluginfetchmailmodule.php");
+
+$fetchmailModule = new PluginFetchmailModule(null, null);
+
+$fetchmailModule->changeAESKey($oldkey, $newkey);
+
+?>`
+
+Save the above code to (for example): `/usr/share/kopano-webapp/plugins/fetchmail/changeAESKey.php` (Modify the parameters $oldkey and $newkey).
+Afterwards call it via CLI: `php /usr/share/kopano-webapp/plugins/fetchmail/changeAESKey.php`
+
+Remember to change the parameter `PLUGIN_FETCHMAIL_PASSWORDS_AES_KEY` in `/usr/share/kopano-webapp/plugins/fetchmail/config.php` !
+
+
 # How to uninstall
 
 - Stop the daemon with `perl kopano_fetchmail.pl --stop`
@@ -70,6 +99,10 @@ Account Status in Plugin Settings and Log Message:
 # Notes
 
 Feedback and Bug Reports are always welcome!
+
+# Project Contributors
+
+Andreas Brodowski (aka dw2412)
 
 # License
 
