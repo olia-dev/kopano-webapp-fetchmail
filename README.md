@@ -66,7 +66,9 @@ If you need to change the Key used to encrypt the Passwords stored in the Databa
 To call this function, you have to create a simple PHP script and execute it. 
 
 An example, of how to call this function:
-`<?php
+
+```php
+<?php
 
 $oldkey="changethis!";
 $newkey="changethis!";
@@ -81,7 +83,8 @@ $fetchmailModule = new PluginFetchmailModule(null, null);
 
 $fetchmailModule->changeAESKey($oldkey, $newkey);
 
-?>`
+?>
+```
 
 Save the above code to (for example): `/usr/share/kopano-webapp/plugins/fetchmail/changeAESKey.php` (Modify the parameters $oldkey and $newkey).
 Afterwards call it via CLI: `php /usr/share/kopano-webapp/plugins/fetchmail/changeAESKey.php`
