@@ -49,7 +49,7 @@ Zarafa.plugins.fetchmail.dialogs.FetchmailAccountDialogDetailsPanel = Ext.extend
                 hideLabel: true,
                 hidden : true,
                 readOnly: true,
-                value : container.getUser().getEmailAddress()
+                value : container.getUser().getSMTPAddress()
             }, {
             	xtype:'textfield',
                 fieldLabel : dgettext('plugin_fetchmail', 'Mail Server'),
