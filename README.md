@@ -105,7 +105,7 @@ Feedback and Bug Reports are always welcome!
 
 # Project Contributors
 
-Andreas Brodowski (aka dw2412)
+Andreas Brodowski (aka dw2412), haggybear
 
 # License
 
